@@ -1,0 +1,21 @@
+# Dataset và file nén dữ liệu lớn
+dataset/
+*.zip
+
+# File mô hình đã huấn luyện (dung lượng lớn)
+*.h5
+*.keras
+
+# Python cache & môi trường ảo
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
