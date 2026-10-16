@@ -23,6 +23,7 @@ CNN-phanloaichomeo/
 │       ├── cats/
 │       └── dogs/
 │
+├── CNN_phan_loai_cho_meo.ipynb # Notebook báo cáo khoa học (chạy sẵn 100% cell & biểu đồ)
 ├── CNN_img.py             # Mã nguồn huấn luyện mô hình CNN
 ├── predict.py             # Script dự đoán hình ảnh Chó/Mèo
 ├── download_dataset.py    # Script tự động tải và tổ chức dataset
@@ -30,6 +31,8 @@ CNN-phanloaichomeo/
 ├── run_predict.bat        # File click chạy nhanh dự đoán ảnh mẫu
 ├── sample_cat.jpg         # Ảnh mèo mẫu để thử nghiệm
 ├── sample_dog.jpg         # Ảnh chó mẫu để thử nghiệm
+├── bon1.jpg               # Ảnh thử nghiệm bổ sung
+├── bon2.jpg               # Ảnh thử nghiệm bổ sung
 └── README.md
 ```
 
@@ -51,6 +54,24 @@ Mô hình được xây dựng theo kiến trúc mạng tích chập tuần tự
 - **Thuật toán tối ưu (Optimizer):** `Adam`
 - **Hàm mất mát (Loss function):** `binary_crossentropy`
 - **Chỉ số đánh giá:** `accuracy` (độ chính xác)
+
+---
+
+## 📓 Báo Cáo Thực Nghiệm Bằng Jupyter Notebook (Khuyên dùng cho Báo Cáo / Đồ Án)
+
+File **[`CNN_phan_loai_cho_meo.ipynb`](CNN_phan_loai_cho_meo.ipynb)** đã được **chạy sẵn 100% các cell (Run All Cells)**, chứa đầy đủ kết quả đầu ra, đồ thị độ phân giải cao và bảng số liệu đánh giá chuyên sâu:
+
+1. **Khám phá & Trực quan hóa Dữ liệu (EDA):** Thống kê số lượng, biểu đồ phân bố lớp, lưới ảnh mẫu Chó/Mèo với độ phân giải gốc.
+2. **Tiền xử lý & Tăng cường Dữ liệu (Data Augmentation):** Minh họa trực quan các phép biến đổi ảnh (Zoom, Shear, Flip) trên ảnh thực tế.
+3. **Kiến trúc Mạng CNN:** Chi tiết các tầng nơ-ron, tham số tính toán (`813,217` tham số).
+4. **Huấn luyện Mô hình:** Theo dõi hàm mất mát và độ chính xác theo từng epoch với `EarlyStopping`.
+5. **Đường cong Học tập (Learning Curves):** Biểu đồ Loss & Accuracy qua các Epoch (Train vs Validation).
+6. **Đánh giá Chuyên sâu trên 2.000 Ảnh Test:**
+   - **Ma trận nhầm lẫn (Confusion Matrix):** Heatmap trực quan chi tiết TP, TN, FP, FN.
+   - **Báo cáo Phân loại (Classification Report):** Bảng và biểu đồ cột so sánh Precision, Recall, F1-Score cho từng lớp.
+   - **Đường cong ROC & Điểm AUC:** Năng lực phân biệt nhị phân đạt **AUC = 0.8502**.
+7. **Phân tích Sai số Thực tế (Failure Analysis):** Lưới 16 ảnh test ngẫu nhiên kèm độ tin cậy và phân tích nguyên nhân các ca đoán nhầm.
+8. **Thử nghiệm Thực tế:** Dự đoán trên ảnh mẫu ngoài dự án (`sample_cat.jpg`, `sample_dog.jpg`, `bon1.jpg`, `bon2.jpg`).
 
 ---
 
